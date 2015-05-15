@@ -128,5 +128,10 @@ export default DS.RESTAdapter.extend({
     }
 
     return url;
+  },
+  ajaxError: function(jqXHR) {
+    var error = this._super(jqXHR);
+
+    return error;
   }
 });
